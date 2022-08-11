@@ -642,6 +642,24 @@ securityConfig:
             - 'cluster:admin/opensearch/ml/tasks/get'
             - 'cluster:admin/opensearch/ml/tasks/search'
 
+        # Allows users to read Notifications config/channels
+        notifications_read_access:
+          reserved: true
+          cluster_permissions:
+            - 'cluster:admin/opensearch/notifications/configs/get'
+            - 'cluster:admin/opensearch/notifications/features'
+            - 'cluster:admin/opensearch/notifications/channels/get'
+
+        # Allows users to see snapshots, repositories, and snapshot management policies
+        snapshot_management_read_access:
+          reserved: true
+          cluster_permissions:
+            - 'cluster:admin/opensearch/snapshot_management/policy/get'
+            - 'cluster:admin/opensearch/snapshot_management/policy/search'
+            - 'cluster:admin/opensearch/snapshot_management/policy/explain'
+            - 'cluster:admin/repository/get'
+            - 'cluster:admin/snapshot/get'
+
         # Allows users to use all ML functionality
         ml_full_access:
           reserved: true
@@ -668,7 +686,6 @@ securityConfig:
             - cluster:admin/opendistro/transform/get_transforms
             # To enable read access to Snapshots
             - cluster:admin/repository/get
-            - cluster:admin/opensearch/snapshot_management/policy/search
             # To enable read access to various ISM Jobs
             - cluster:admin/opendistro/rollup/explain
             - cluster:admin/opendistro/ism/policy/get
@@ -761,6 +778,10 @@ securityConfig:
           - "opendistro_security_anonymous_backendrole"
 
         notifications_read_access:
+          backend_roles:
+          - "opendistro_security_anonymous_backendrole"
+
+        snapshot_management_read_access:
           backend_roles:
           - "opendistro_security_anonymous_backendrole"
 
