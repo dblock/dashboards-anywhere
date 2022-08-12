@@ -23,6 +23,7 @@ jobs:
 
   OS-OSD-Deployment:
     runs-on: ubuntu-latest
+    environment: ${{inputs.deploy-env}}
 
     steps:
       - uses: actions/checkout@v2
