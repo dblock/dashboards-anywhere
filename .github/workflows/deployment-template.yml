@@ -23,7 +23,6 @@ jobs:
 
   OS-OSD-Deployment:
     runs-on: ubuntu-latest
-    environment: build
 
     steps:
       - uses: actions/checkout@v2
