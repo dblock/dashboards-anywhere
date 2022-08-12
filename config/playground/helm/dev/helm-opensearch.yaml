@@ -533,6 +533,7 @@ securityConfig:
           reserved: true
           cluster_permissions:
             - 'cluster:admin/opensearch/observability/get'
+            - 'cluster:admin/opensearch/ppl'
 
         # Allows users to all Observability functionality
         observability_full_access:
@@ -687,8 +688,6 @@ securityConfig:
             - cluster:admin/opendistro/ism/managedindex/explain
             - cluster:admin/opendistro/rollup/search
             - cluster:admin/opendistro/transform/get_transforms
-            # To enable read access to Snapshots
-            - cluster:admin/repository/get
             # To enable read access to various ISM Jobs
             - cluster:admin/opendistro/rollup/explain
             - cluster:admin/opendistro/ism/policy/get
