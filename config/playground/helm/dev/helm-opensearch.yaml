@@ -460,6 +460,8 @@ securityConfig:
           cluster_permissions:
             - 'cluster:admin/opendistro/alerting/alerts/get'
             - 'cluster:admin/opendistro/alerting/destination/get'
+            - 'cluster:admin/opendistro/alerting/destination/email_group/search'
+            - 'cluster:admin/opendistro/alerting/destination/email_account/search'
             - 'cluster:admin/opendistro/alerting/monitor/get'
             - 'cluster:admin/opendistro/alerting/monitor/search'
 
@@ -679,6 +681,7 @@ securityConfig:
             # For using _cat/indices
             - 'cluster:monitor/state'
             - 'cluster:monitor/health'
+            - 'cluster:monitor/nodes/info'
             # To enable read access to ISM
             - cluster:admin/opendistro/ism/policy/search
             - cluster:admin/opendistro/ism/managedindex/explain
