@@ -729,6 +729,7 @@ securityConfig:
                 - "indices:admin/aliases/get*"
                 - "indices:admin/mappings/get"
                 - "indices:data/read/scroll"
+                - "indices:data/read/scroll/clear"
                 - "indices:monitor/settings/get"
                 - "indices:monitor/stats"
           tenant_permissions:
